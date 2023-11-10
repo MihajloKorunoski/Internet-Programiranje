@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+  <script>
+    while(true){
+      let number = prompt("Внеси четирицифрен број:")
+      while(number.length!==4 || isNaN(parseInt(number))){
+        alert("Мора да внесеш четирицифрен број!!!")
+        number = prompt("Внеси четирицифрен број:")
+      }
+      if(checkPalindrome(number)){
+        alert("Бројот е палиндром")
+      } else {
+        alert("Бројот не е палиндром")
+      }
+
+    }
+    function checkPalindrome(num){
+      let reversed = num.split('').reverse().join('')
+      return num === reversed
+    }
+  </script>
+
+</body>
+</html>
