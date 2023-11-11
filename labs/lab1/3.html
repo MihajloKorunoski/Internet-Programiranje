@@ -12,8 +12,8 @@
 
     let combinedString = string1 + " " + string2 + " " + string3
 
-    let longestWord =  combinedString.split(/\s+/).reduce((longest,current) => {
-        return current.length > longest.length? current : longest
+    let longestWord = combinedString.split(/\s+/).reduce((longest, current) => {
+        return current.length > longest.length ? current : longest
     }, '')
 
     alert(`Најдолг е зборот: ${longestWord}`)
