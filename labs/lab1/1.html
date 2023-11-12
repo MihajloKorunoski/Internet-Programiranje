@@ -8,6 +8,7 @@
 <script>
     while (true) {
         let number = prompt("Внеси четирицифрен број:")
+
         if (number === null){
             alert("Операцијата е откажана")
             break
@@ -21,16 +22,32 @@
                 break
             }
         }
+
+        let palindromeString = ""
+
         if (checkPalindrome(number)) {
-            alert("Бројот е палиндром")
+            palindromeString = "Бројот е палиндром"
         } else {
-            alert("Бројот не е палиндром")
+            palindromeString = "Бројот не е палиндром"
+        }
+
+        if (checkDivide(number)){
+            alert(`${palindromeString} и се дели со збирот на неговите цифри`)
+        } else {
+            alert(`${palindromeString} и не се дели со збирот на неговите цифри`)
         }
 
     }
     function checkPalindrome(num) {
         let reversed = num.split('').reverse().join('')
         return num === reversed
+    }
+    function checkDivide(num){
+        let denominator = 0
+        for(let n of num){
+            denominator += parseInt(n)
+        }
+        return num % denominator === 0
     }
 </script>
 
