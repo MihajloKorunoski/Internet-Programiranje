@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .input-area {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .card-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>User Cards</h1>
+    </header>
+    <div class="input-area">
+        <div class="input-group">
+        <span>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="id_input">ID:</label>
+            <input type="text" id="id_input" placeholder="Enter ID (lowercase and characters only)" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="width">Width (px):</label>
+            <input type="number" id="width" placeholder="Enter width" min="1" max="500" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="height">Height (px):</label>
+            <input type="number" id="height" placeholder="Enter height" min="1" max="500" required>
+        </span>
+        </div>
+        <div class="input-group">
+            <span>
+            <label for="color">Color:</label>
+                <select id="color" required>
+                    <option value="" disabled selected>Select color</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </span>
+        </div>
+
+        <div class="input-group">
+            <button type="button" id="addCardButton" class="button">Add Card</button>
+        </div>
+        <div class="card-display" id="cardsContainer">
+
+        </div>
+        <footer>
+            <p>Total Sold: <span id="totalSold">0</span></p>
+        </footer>
+    </div>
+</div>
+<script>
+
+</script>
+</body>
+</html>
