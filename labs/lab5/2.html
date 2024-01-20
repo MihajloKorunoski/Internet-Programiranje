@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <style>
+        /* Purple and Black Aesthetic */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c2c2c;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #4c2a85;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        input:disabled {
+            background-color: #555;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        #display {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="text-align:right;">
+    <label>Обиди <span id="tryCount">0</span></label>
+    <p>Погодок: <input id="guess" type="text" style="width:150px"/></p>
+    <button id="guessBtn">Погоди</button>
+    <button id="resetBtn">Од почеток</button>
+</div>
+<div id="display" class="container"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let tryCount = 0;
+        let randomNumber = generateRandomNumber();
+        const displayElement = document.getElementById("display");
+        const tryCountElement = document.getElementById("tryCount");
+        const guessInputElement = document.getElementById("guess");
+
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 9000) + 1000;
+        }
+
+        function verifyGuess(number) {
+            const numToGuess = String(randomNumber);
+            const guessedNum = String(number).padStart(4, '0');
+            let onSameSpot = 0, contains = 0;
+
+            guessedNum.split('').forEach((digit, index) => {
+                if (numToGuess.includes(digit)) {
+                    contains++;
+                    if (digit === numToGuess[index]) {
+                        onSameSpot++;
+                    }
+                }
+            });
+
+            return [contains, onSameSpot];
+        }
+
+        function makeGuess() {
+            tryCount++;
+            const guess = guessInputElement.value;
+            const [contains, onSameSpot] = verifyGuess(guess);
+
+            displayElement.innerHTML += `Има ${contains}, на место ${onSameSpot} ${guess}<br/>`;
+            if (guess === randomNumber.toString()) {
+                displayElement.innerHTML += "ПОГОДОК!!!";
+                tryCount = 10;
+            }
+
+            if (tryCount >= 10) {
+                displayElement.innerHTML += tryCount === 10 && guess !== randomNumber.toString()
+                    ? `Не успеавте да го погодите бројот од 10 обиди. Бројот е ${randomNumber}`
+                    : '';
+                guessInputElement.disabled = true;
+            }
+
+            tryCountElement.textContent = tryCount;
+        }
+
+        function resetGame() {
+            randomNumber = generateRandomNumber();
+            tryCount = 0;
+            displayElement.innerHTML = "";
+            guessInputElement.disabled = false;
+            guessInputElement.value = "";
+            tryCountElement.textContent = tryCount;
+        }
+
+        document.getElementById("guessBtn").addEventListener("click", makeGuess);
+        document.getElementById("resetBtn").addEventListener("click", resetGame);
+    });
+</script>
+</body>
+</html>

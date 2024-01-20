@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    #list li {
+      background-color: #ff6b6b;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      list-style: none;
+    }
+    #list {
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+
+</head>
+<body>
+<h1>About Me</h1>
+<ul id="list">
+  <li>Name: <span id="name"></span></li>
+  <li>Index: <span id="index"></span></li>
+  <li>Hometown: <span id="hometown"></span></li>
+</ul>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    document.body.style.fontFamily = 'Arial, sans-serif';
+
+    document.getElementById("name").textContent = "Mihajlo Korunoski";
+    document.getElementById("index").textContent = "191082";
+    document.getElementById("hometown").textContent = "Krushevo";
+
+    let listItems = document.querySelectorAll("#list li");
+    for (let listItem of listItems) {
+      listItem.style.backgroundColor = "#ff6b6b";
+    }
+  });
+</script>
+</body>
+</html>

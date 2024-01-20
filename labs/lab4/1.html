@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c2c34;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #3d3d50;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #6a5acd;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #7b68ee;
+        }
+        table, th, td {
+            border: 1px solid #fff;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #6a5acd;
+        }
+        tr:nth-child(even) {
+            background-color: #4a4a5a;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="form-container">
+        <label for="name">Име:</label>
+        <input type="text" id="name" name="name" maxlength="10">
+
+        <label for="surname">Презиме:</label>
+        <input type="text" id="surname" name="surname" maxlength="20">
+
+        <label for="index-number">Индекс:</label>
+        <input type="text" id="index-number" name="index-number" maxlength="10">
+
+        <label for="subject">Предмет:</label>
+        <input type="text" id="subject" name="subject" maxlength="25">
+
+        <label for="grade">Оцена:</label>
+        <select id="grade">
+            <option value="5">5 (пет)</option>
+            <option value="6">6 (шест)</option>
+            <option value="7">7 (седум)</option>
+            <option value="8">8 (осум)</option>
+            <option value="9">9 (девет)</option>
+            <option value="10">10 (десет)</option>
+        </select>
+
+        <button id="submit-button">Enter</button>
+    </div>
+    <div>
+        <table id="students-table">
+            <tr>
+                <th>Име</th>
+                <th>Презиме</th>
+                <th>Индекс</th>
+                <th>Предмет</th>
+                <th>Оцена</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const students = [];
+        const formContainer = document.getElementById('form-container');
+        const studentsTable = document.getElementById('students-table');
+        const submitButton = document.getElementById('submit-button');
+
+        submitButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const indexNumber = document.getElementById('index-number').value;
+            const subject = document.getElementById('subject').value;
+            const grade = document.getElementById('grade').value;
+
+            if(name && surname && indexNumber && subject && !isNaN(indexNumber)){
+                const student = { name, surname, indexNumber, subject, grade };
+                students.push(student);
+                addStudentToTable(student);
+                resetForm();
+            } else {
+                alert("Please fill in all fields with valid data!");
+            }
+        });
+
+        function addStudentToTable(student) {
+            const row = studentsTable.insertRow();
+            row.innerHTML = `<td>${student.name}</td>
+                             <td>${student.surname}</td>
+                             <td>${student.indexNumber}</td>
+                             <td>${student.subject}</td>
+                             <td>${student.grade}</td>`;
+        }
+
+        function resetForm() {
+            document.getElementById('name').value = '';
+            document.getElementById('surname').value = '';
+            document.getElementById('index-number').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('grade').selectedIndex = 0;
+        }
+    });
+</script>
+</body>
+</html>

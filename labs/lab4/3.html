@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c2c34;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            transition: background-color 0.5s, background-image 0.5s;
+        }
+        #container {
+            text-align: center;
+            background-color: #3d3d50;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #7b68ee;
+        }
+        input[type="text"] {
+            margin: 0 10px 0 0;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <div class="input-group">
+        <input type="radio" id="colorOption" value="color" name="backgroundSelector" checked>Color
+        <input type="radio" id="imageOption" value="image" name="backgroundSelector">Image<br>
+    </div>
+    <div class="input-group">
+        <label>Value: </label><input type="text" id="valueInput"><br>
+        <button id="changeButton">Промени</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const changeButton = document.getElementById('changeButton');
+        const colorOption = document.getElementById('colorOption');
+        const valueInput = document.getElementById('valueInput');
+
+        changeButton.addEventListener('click', function() {
+            const value = valueInput.value.trim();
+            if (colorOption.checked) {
+                document.body.style.backgroundColor = value;
+                document.body.style.backgroundImage = '';
+            } else {
+                document.body.style.backgroundImage = `url(${value})`;
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundRepeat = 'no-repeat';
+                document.body.style.backgroundPosition = 'center center';
+            }
+        });
+    });
+</script>
+</body>
+</html>

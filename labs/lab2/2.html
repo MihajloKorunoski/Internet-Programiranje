@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #image img {
+            max-width: 80%;
+            max-height: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<button id="randomPicButton">Click for a Random Image</button>
+<div id="image"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('randomPicButton');
+        button.addEventListener('click', function() {
+            const images = [
+                "https://data.whicdn.com/images/15145864/large.jpg",
+                "https://cdn0.vox-cdn.com/uploads/chorus_image/image/48151611/8559004265_4b81d299ce.0.0.jpg",
+                "https://farm5.staticflickr.com/4060/4567292488_5d3f4b05f6_z.jpg"
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imageContainer = document.getElementById('image');
+            imageContainer.innerHTML = `<img src="${images[randomIndex]}" alt="Random Image">`;
+        });
+    });
+</script>
+</body>
+</html>
