@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Loading</title>
+    <script>
+        const addHeading = () => {
+            const heading = document.createElement('h1');
+            const headingText = document.createTextNode('Ќе живее овај народ');
+            heading.appendChild(headingText);
+            document.body.appendChild(heading);
+        }
+
+        document.addEventListener('DOMContentLoaded', addHeading);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

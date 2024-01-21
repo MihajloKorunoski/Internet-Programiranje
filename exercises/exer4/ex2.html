@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Tests</title>
+    <style>
+        .container{
+            margin: 0.5in;
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form>
+        <p><b>Text Colour:</b></p>
+        <select id="textColor">
+            <option value="black">Black</option>
+            <option value="darkblue">DarkBlue</option>
+            <option value="green">Green</option>
+        </select>
+
+        <p><b>Background Colour:</b></p>
+        <select id="bgColor">
+            <option value="white">White</option>
+            <option value="lightgrey">LightGrey</option>
+            <option value="red">Red</option>
+        </select>
+
+        <p><b>Link Colour:</b></p>
+        <select id="linkColor">
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+        </select>
+
+        <small><a href="http://www.google.com" target="_blank" rel="noopener noreferrer" id="sample">sample link</a></small><br>
+        </form>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        function setBodyAttr(attr, value){
+            if(document.body){
+                document.body[attr] = value;
+            }
+            else{
+                alert('Feature not supported in your browser');
+            }
+        }
+        document.getElementById('textColor').addEventListener('change', function () {
+            setBodyAttr('text', this.value);
+        });
+        document.getElementById('bgColor').addEventListener('change', function () {
+            setBodyAttr('bgColor', this.value);
+        });
+        document.getElementById('linkColor').addEventListener('change', function() {
+            setBodyAttr('a', this.value);
+        });
+    })
+</script>
+</body>
+</html>
