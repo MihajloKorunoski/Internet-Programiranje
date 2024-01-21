@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Часовник</title>
+    <script>
+        function Clock() {
+            this.start = function () {
+                setInterval(() => {
+                    let date = new Date();
+                    let hours = date.getHours();
+                    let minutes = date.getMinutes();
+                    let seconds = date.getSeconds();
+                    console.log(`${hours}:${minutes}:${seconds}`);
+                }, 1000)
+            }
+        }
+        let clock = new Clock();
+        clock.start();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

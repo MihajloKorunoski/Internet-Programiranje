@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .input-field {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="text" id="arrayInput" class="input-field" placeholder="Enter array elements separated by commas">
+    <input type="text" id="elementInput" class="input-field" placeholder="Enter element to remove">
+    <button id="removeButton" class="button">Remove Element</button>
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const removeButton = document.getElementById('removeButton');
+        removeButton.addEventListener('click', () => {
+            const array = document.getElementById('arrayInput').value.split(',').map(item => item.trim());
+            const elementToRemove = document.getElementById('elementInput').value.trim();
+            const resultArray = removeArrayElement(array, elementToRemove);
+            document.getElementById('result').innerText = 'Updated Array: [' + resultArray.join(', ') + ']';
+        });
+
+        const removeArrayElement = (array, element) => array.filter(ele => ele !== element);
+    });
+
+</script>
+</body>
+</html>
