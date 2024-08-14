@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>The</li>
+        <li>Test</li>
+    </ul>
+    <ul>
+        <li>Is</li>
+        <li>Passed</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('ul > li:last-child');
+            elements.forEach(element =>{
+                alert(element.textContent);
+            })
+        })
+    </script>
+</body>
+</html>

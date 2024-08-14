@@ -9,6 +9,11 @@
             height: 400px;
         }
     </style>
+    <style id="linkStyle">
+        a, a:link, a:visited, a:hover, a:active, a:focus {
+            color: blue; /* Default link color */
+        }
+    </style>
 
 </head>
 <body>
@@ -35,7 +40,7 @@
             <option value="green">Green</option>
         </select>
 
-        <small><a href="http://www.google.com" target="_blank" rel="noopener noreferrer" id="sample">sample link</a></small><br>
+        <small><a href="https://www.google.com" target="_blank" rel="noopener noreferrer" id="sample">sample link</a></small><br>
         </form>
     </div>
 <script>
@@ -48,6 +53,10 @@
                 alert('Feature not supported in your browser');
             }
         }
+        const setLinkColor = (color) => {
+            const linkStyleElement = document.getElementById('linkStyle');
+            linkStyleElement.textContent = `a, a:link, a:visited, a:hover, a:active, a:focus { color: ${color}; }`;
+        };
         document.getElementById('textColor').addEventListener('change', function () {
             setBodyAttr('text', this.value);
         });
@@ -55,7 +64,7 @@
             setBodyAttr('bgColor', this.value);
         });
         document.getElementById('linkColor').addEventListener('change', function() {
-            setBodyAttr('a', this.value);
+            setLinkColor(this.value);
         });
     })
 </script>
