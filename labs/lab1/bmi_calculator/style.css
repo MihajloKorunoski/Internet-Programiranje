@@ -1,0 +1,15 @@
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .input-label {
+            color: grey;
+            pointer-events: none;
+        }
+
+        .btn {
+            width: 150px;
+            cursor: pointer;
+        }
