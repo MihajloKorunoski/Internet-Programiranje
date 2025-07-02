@@ -27,15 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
       div.style.width = `${card.width}px`;
       div.style.height = `${card.height}px`;
 
-      div.innerHTML = `
+
+      const content = document.createElement('div');
+      content.className = 'card-content';
+      content.innerHTML = `
+
         <p>ID: ${id}</p>
         <p>User: ${card.username}</p>
         <p>${card.width} x ${card.height}</p>
         <p>Price: ${card.price.toFixed(2)}</p>
       `;
+
       const btn = document.createElement('button');
       btn.textContent = 'Sell';
       btn.addEventListener('click', () => sellCard(id));
+
+      div.appendChild(content);
+
       div.appendChild(btn);
       cardsContainer.appendChild(div);
     });
