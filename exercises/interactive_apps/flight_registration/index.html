@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрација на летови</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Регистрација на летови</h1>
+    </header>
+    <div class="form-section">
+        <h2>Регистрација на лет</h2>
+        <div class="form-group">
+                <span>
+                    <label for="name">Име и презиме:</label>
+                    <input type="text" id="name" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="designationNumber">Ознака на летало:</label>
+                    <input type="text" id="designationNumber" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="coordinates">Координати на лет:</label>
+                    <input type="text" id="coordinates" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="radius">Радиус на лет:</label>
+                    <input type="text" min="1" id="radius" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="height">Висина на лет:</label>
+                    <input type="text" min="1" id="height" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="aircraftType">Тип на летало:</label>
+                    <select id="aircraftType" required>
+                        <option value="" disabled selected>Избери летало</option>
+                        <option value="glider">Едрилица</option>
+                        <option value="drone">Дрон</option>
+                    </select>
+                </span>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="addFlight">Најави</button>
+        </div>
+    </div>
+    <div class="number-of-flights">
+        <p>Вкупно најавени летови: <span id="numberFlights">0</span></p>
+    </div>
+    <div class="registered-flights">
+        <h2>Регистрирани летови</h2>
+        <ul class="flight-list">
+
+        </ul>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

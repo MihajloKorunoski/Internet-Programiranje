@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header-container">
+    <header>
+        <h1>Огласи за продажба на предмети</h1>
+    </header>
+</div>
+<div class="main-content">
+    <div class="form-container">
+        <h2>Регистрација на предмет</h2>
+        <div class="form-group">
+            <label for="name">Име и презиме:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label>Предмет:</label>
+            <div class="checkbox-container">
+                <div>
+                    <input type="checkbox" id="itemCar" name="item" value="Кола">
+                    <label for="itemCar">Кола</label>
+                    <input type="checkbox" id="itemWater" name="item" value="Вода">
+                    <label for="itemWater">Вода</label>
+                    <input type="checkbox" id="itemMouse" name="item" value="Глувче">
+                    <label for="itemMouse">Глувче</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="itemBag" name="item" value="Ташна">
+                    <label for="itemBag">Ташна</label>
+                    <input type="checkbox" id="itemBottle" name="item" value="Шише">
+                    <label for="itemBottle">Шише</label>
+                    <input type="checkbox" id="itemComputer" name="item" value="Компјутер">
+                    <label for="itemComputer">Компјутер</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="itemCode">Код на предмет:</label>
+            <input type="text" id="itemCode">
+        </div>
+        <div class="form-group">
+            <label for="description">Опис на предмет:</label>
+            <textarea id="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Цена:</label>
+            <input type="number" id="price">
+        </div>
+        <div class="form-group">
+            <label>Состојба:</label>
+            <div class="radio-container">
+                <input type="radio" id="conditionUsed" name="condition" value="used">
+                <label for="conditionUsed">Користен</label>
+                <input type="radio" id="conditionNeverUsed" name="condition" value="neverUsed">
+                <label for="conditionNeverUsed">Некористен</label>
+            </div>
+        </div>
+
+        <button type="button" id="addAd">Додади оглас</button>
+    </div>
+
+    <div class="ad-counter">Активни предмети: <span id="activeAdsCount">0</span></div>
+
+    <div class="table-container">
+        <div class="table-wrapper">
+            <h2>Користени предмети</h2>
+            <table id="usedItemsTable">
+                <thead>
+                <tr>
+                    <th>Име</th>
+                    <th>Предмет</th>
+                    <th>Цена</th>
+                    <th>Код</th>
+                    <th>Број</th>
+                    <th>Акција</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrapper">
+            <h2>Некористени предмети</h2>
+            <table id="neverUsedItemsTable">
+                <thead>
+                <tr>
+                    <th>Име</th>
+                    <th>Предмет</th>
+                    <th>Цена</th>
+                    <th>Код</th>
+                    <th>Број</th>
+                    <th>Акција</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
