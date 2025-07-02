@@ -1,0 +1,7 @@
+        .container{
+            margin: 0.5in;
+            height: 400px;
+        }
+        a, a:link, a:visited, a:hover, a:active, a:focus {
+            color: blue; /* Default link color */
+        }

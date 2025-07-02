@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<h1>Калкулатор</h1>
+<div class="calculator-container">
+    <div style="text-align:left;">
+        <p>
+            а <input id="a" type="text" style="width:40px"/>
+            b <input id="b" type="text" style="width:40px"/>
+        </p>
+        <p>
+            <input id="plus" type="radio" name="oper" checked>a+b
+            <input id="minus" type="radio" name="oper">a-b
+            <input id="multiply" type="radio" name="oper">a*b
+            <input id="divide" type="radio" name="oper">a/b
+            <br>
+            <input id="sin" type="radio" name="oper">sin(a)
+            <input id="cos" type="radio" name="oper">cos(a)
+            <input id="tan" type="radio" name="oper">tg(a)
+            <br>
+            <input id="round" type="radio" name="oper">[a]
+            <input id="power" type="radio" name="oper">a<sup>b</sup>
+            <input id="sqrt" type="radio" name="oper">&radic;<span style="text-decoration: overline">a</span>
+        </p>
+        <button>Пресметај</button>
+        <p id="result"></p>
+    </div>
+</div>
+<br/>
+</body>
+</html>

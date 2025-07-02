@@ -1,0 +1,141 @@
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e7f2fa;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgb(0, 0, 0, 0.05);
+        }
+
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .form-section {
+            background-color: #f8f9fa;
+            border: 1px solid #d1e7fd;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            margin-top: -1px;
+        }
+
+        .form-section h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group span label {
+            font-weight: bold;
+            color: #333333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group span input,
+        .form-group span select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 80px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .number-of-flights {
+            padding: 10px;
+            background-color: #e1f0ff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #b6d4fe;
+            text-align: center;
+        }
+
+        .number-of-flights p {
+            margin: 0;
+            color: #007bff;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .number-of-flights span {
+            font-size: 1.3em;
+        }
+
+        .registered-flights {
+            margin-top: 30px;
+        }
+
+        .registered-flights {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .flight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .flight-list li {
+            background-color: #d0e7ff;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .flight-list li div button{
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            margin-right: 5px;
+        }
+        .flight-list li div button:hover{
+            background-color: #0056b3;
+
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }

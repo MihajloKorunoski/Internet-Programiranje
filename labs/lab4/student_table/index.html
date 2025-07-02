@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="form-container">
+        <label for="name">Име:</label>
+        <input type="text" id="name" name="name" maxlength="10">
+
+        <label for="surname">Презиме:</label>
+        <input type="text" id="surname" name="surname" maxlength="20">
+
+        <label for="index-number">Индекс:</label>
+        <input type="text" id="index-number" name="index-number" maxlength="10">
+
+        <label for="subject">Предмет:</label>
+        <input type="text" id="subject" name="subject" maxlength="25">
+
+        <label for="grade">Оцена:</label>
+        <select id="grade">
+            <option value="5">5 (пет)</option>
+            <option value="6">6 (шест)</option>
+            <option value="7">7 (седум)</option>
+            <option value="8">8 (осум)</option>
+            <option value="9">9 (девет)</option>
+            <option value="10">10 (десет)</option>
+        </select>
+
+        <button id="submit-button">Enter</button>
+    </div>
+    <div>
+        <table id="students-table">
+            <tr>
+                <th>Име</th>
+                <th>Презиме</th>
+                <th>Индекс</th>
+                <th>Предмет</th>
+                <th>Оцена</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
