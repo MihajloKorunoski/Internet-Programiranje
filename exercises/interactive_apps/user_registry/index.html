@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Online Classes</h1>
+    </header>
+    <div class="form-section">
+        <h2>Register a New User</h2>
+        <div class="form-group">
+                <span>
+                    <label for="name">Name and Surname:</label>
+                    <input type="text" id="name" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </span>
+        </div>
+        <div class="form-group">
+                <span>
+                    <label for="role">Role:</label>
+                    <select id="role" required>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </span>
+        </div>
+        <div>
+            <button type="submit" id="addButton">Add</button>
+        </div>
+    </div>
+    <div class="user-section">
+        <h2>Users</h2>
+        <table></table>
+    </div>
+    <footer class="footer">
+        <p>Available teachers: <span id="teacherCount">0</span></p>
+    </footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>User Cards</h1>
+    </header>
+    <div class="input-area">
+        <div class="input-group">
+        <span>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="id_input">ID:</label>
+            <input type="text" id="id_input" placeholder="Enter ID (lowercase and characters only)" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="width">Width (px):</label>
+            <input type="number" id="width" placeholder="Enter width" min="1" max="500" required>
+        </span>
+        </div>
+        <div class="input-group">
+        <span>
+            <label for="height">Height (px):</label>
+            <input type="number" id="height" placeholder="Enter height" min="1" max="500" required>
+        </span>
+        </div>
+        <div class="input-group">
+            <span>
+            <label for="color">Color:</label>
+                <select id="color" required>
+                    <option value="" disabled selected>Select color</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </span>
+        </div>
+
+        <div class="input-group">
+            <button type="button" id="addCardButton" class="button">Add Card</button>
+        </div>
+        <div class="card-display" id="cardsContainer">
+
+        </div>
+        <footer>
+            <p>Total Sold: <span id="totalSold">0</span></p>
+        </footer>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
