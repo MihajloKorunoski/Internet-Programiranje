@@ -27,9 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
       div.style.width = `${card.width}px`;
       div.style.height = `${card.height}px`;
 
+
       const content = document.createElement('div');
       content.className = 'card-content';
       content.innerHTML = `
+
         <p>ID: ${id}</p>
         <p>User: ${card.username}</p>
         <p>${card.width} x ${card.height}</p>
@@ -41,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => sellCard(id));
 
       div.appendChild(content);
+
       div.appendChild(btn);
       cardsContainer.appendChild(div);
     });
