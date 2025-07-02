@@ -66,9 +66,11 @@ header h1 {
 }
 
 .card-display {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: flex-start;
+
 }
 
 .card {
@@ -78,6 +80,10 @@ header h1 {
   padding: 1rem;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card button {
