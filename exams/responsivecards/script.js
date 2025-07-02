@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       div.style.color = card.color === 'yellow' ? '#333' : '#fff';
       div.style.width = `${card.width}px`;
       div.style.height = `${card.height}px`;
+
       div.innerHTML = `
         <p>ID: ${id}</p>
         <p>User: ${card.username}</p>

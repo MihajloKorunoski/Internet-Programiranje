@@ -70,6 +70,7 @@ header h1 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: flex-start;
+
 }
 
 .card {
