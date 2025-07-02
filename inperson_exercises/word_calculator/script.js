@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .calculator-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        #equationInput {
-            width: 300px;
-            padding: 8px;
-            font-size: 16px;
-        }
-        #calculateButton {
-            padding: 8px 16px;
-            font-size: 16px;
-            margin-left: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="calculator-container">
-        <input type="text" id="equationInput" placeholder="Enter equation">
-        <button id='calculateButton' onclick="calculate()">CALCULATE</button>
-    </div>
-    <script>
         const numberWords = {
             'zero': 0,
             'one': 1,
@@ -79,6 +48,4 @@
                 calculateButton.textContent = 'CALCULATE';
             }
         }
-    </script>
-</body>
-</html>
+

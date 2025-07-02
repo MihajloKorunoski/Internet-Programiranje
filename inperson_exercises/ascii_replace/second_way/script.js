@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Replace Numbers Above 32 with ASCII Equivalents</title>
-</head>
-<body>
-
-<script>
   function replaceNumbers() {
     let str = prompt("Enter a string with numbers (e.g., Hello32world):");
     if (str) {
@@ -21,7 +11,5 @@
   }
 
   replaceNumbers();
-</script>
 
-</body>
-</html>
+

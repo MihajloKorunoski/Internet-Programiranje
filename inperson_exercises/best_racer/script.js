@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Racers</title>
-    <script>
       const raceData = prompt("Enter race data in the format 'id_ime_prezime_trka1_trka2_trkaN;' for each racer");
       const racers = {};
 
@@ -40,9 +34,4 @@
 
       alert(`The racer with the lowest average time is ${bestRacer} with average time of ${minAverage.toFixed(2)}`);
 
-    </script>
-</head>
-<body>
 
-</body>
-</html>

@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Soccer Teams</title>
-    <script>
       const teams = {}
 
       while(true){
@@ -39,9 +33,4 @@
       }
 
       alert(results);
-    </script>
-</head>
-<body>
 
-</body>
-</html>

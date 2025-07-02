@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+    <script>
+        function objectToPairs(obj){
+            if(typeof obj !== "object" || obj === null){
+                return [];
+            }
+            return Object.entries(obj);
+        }
+
+        let colors = {
+            red: '#FF0000',
+            green: '#00FF00',
+            white: '#FFFFFF',
+            black: '#000000',
+            blue: '#0000FF',
+            yellow: '#FFFF00'
+        }
+        console.log(objectToPairs(colors));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
