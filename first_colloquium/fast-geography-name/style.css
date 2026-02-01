@@ -1,0 +1,60 @@
+:root{
+    --bg: #0f0f10;
+    --fg: #f3f4f6;
+    --muted: #a1a1aa;
+    --card: #17181b;
+    --border: #2a2b31;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    padding: 22px;
+}
+
+.top{
+    max-width: 900px;
+    margin: 0 auto 16px;
+}
+
+.top h1{
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.top p{
+    margin: 0;
+    color: var(--muted);
+}
+
+.panel{
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.panel h2{
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+pre{
+    margin: 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #0b0b0d;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.35;
+}
