@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background: #0b1220;
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+
+.card{
+    width: min(560px, 100%);
+    background: #111b33;
+    border: 1px solid #223257;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 34px rgba(0,0,0, .35);
+}
+
+h1{
+    margin: 0  0 14px;
+    font-size: 22px;
+}
+
+.lbl{
+    display: block;
+    margin: 0 0 6px;
+    color: #aab3c2;
+}
+
+input{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #223257;
+    background: #060913;
+    color: #e5e7eb;
+    font-size: 16px;
+    outline: none;
+}
+
+.bars{
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.tag{
+    flex:1;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #223257;
+    background: #0a1022;
+    color: #aab3c2;
+    font-weight: 700;
+    user-select: none;
+}
+
+.tag.active{
+    color: #0b1220;
+    border-color: transparent;
+}
+
+.tag.weak.active{
+    background: #f59e0b;
+}
+
+.tag.medium.active{
+    background: #22c55e;
+}
+
+.tag.strong.active{
+    background: #60a5fa;
+}
+
+.hint{
+    margin: 12px 0 0;
+    color: #aab3c2;
+    font-size: 14px;
+}

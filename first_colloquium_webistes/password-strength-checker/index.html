@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Password Strength Checker</h1>
+
+    <label class="lbl" for="pwd">Password</label>
+    <input id="pwd" type="password" placeholder="Type password..." autocomplete="off" />
+
+    <div class="bars">
+      <div class="tag" id="weak">Weak</div>
+      <div class="tag" id="medium">Medium</div>
+      <div class="tag" id="strong">Strong</div>
+    </div>
+
+    <p class="hint">Press Enter when you're done to see the alert.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
