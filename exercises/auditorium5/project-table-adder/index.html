@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+    <h2>Projects details</h2>
+
+    <div class="panel">
+        <div class="row">
+            <label for="author">Author</label>
+            <input id="author" type="text"/>
+        </div>
+
+        <div class="row">
+            <label for="project">Project</label>
+            <input id="project" type="text"/>
+        </div>
+
+        <div class="row">
+            <label for="cost">Cost</label>
+            <input id="cost" type="text"/>
+        </div>
+
+        <button id="addBtn" type="button">Add</button>
+
+        <div id="msg" class="msg"></div>
+    </div>
+
+    <h2 class="mt">Project list - Total cost: <span id="total">0</span></h2>
+
+    <table class="tbl">
+        <thead>
+        <tr>
+            <th>Author</th>
+            <th>Project</th>
+            <th colspan="2">Cost</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
