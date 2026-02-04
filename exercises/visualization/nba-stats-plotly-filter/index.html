@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Stats Comparison</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>NBA Player Stats Comparison</h1>
+
+    <div class="controls">
+        <select id="positionSelect">
+            <option value="All">All Positions</option>
+            <option value="Guard">Guards</option>
+            <option value="Forward">Forwards</option>
+            <option value="Center">Centers</option>
+        </select>
+    </div>
+
+    <div id="chart" class="chart"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
