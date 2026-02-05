@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Online Classes</h1>
+
+  <div class="panel">
+    <div class="grid">
+      <label for="name">Name and Surname</label>
+      <input id="name" type="text">
+
+      <label for="email">Email</label>
+      <input id="email" type="text">
+
+      <label for="age">Age</label>
+      <input id="age" type="text">
+
+      <label for="username">Username</label>
+      <input id="username" type="text">
+
+      <label for="password">Password</label>
+      <input id="password" type="password">
+
+      <label for="role">Role</label>
+      <select id="role">
+        <option value="teacher">Teacher</option>
+        <option value="student">Student</option>
+      </select>
+    </div>
+    <button id="addBtn">Add</button>
+
+    <div class="active">
+      Available Teachers: <span id="teacherCount">0</span>
+    </div>
+  </div>
+
+  <div class="tables">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="usersTable">
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
