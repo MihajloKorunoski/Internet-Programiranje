@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Lottery Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>National Lottery Game</h1>
+
+    <div class="top">
+      <div class="panel">
+        <h3>Assign form</h3>
+
+        <div class="grid">
+          <label for="fullName">Name and Surname:</label>
+          <input type="text" id="fullName"/>
+
+          <label for="amount">Ticket amount:</label>
+          <input id="amount" type="number" min="0"/>
+
+          <label for="code">Code:</label>
+          <input type="text" id="code"/>
+
+          <label for="combo">Combination:</label>
+          <input type="text" id="combo" placeholder="e.g. 1,2,3,4,5,6,7"/>
+
+          <label for="bonus">Bonus:</label>
+          <select id="bonus">
+            <option value="yes">Yes</option>
+            <option value="no" selected>No</option>
+          </select>
+
+          <button id="addBtn">Add</button>
+        </div>
+      </div>
+
+      <div class="panel lucky">
+        <h3>Lucky Numbers</h3>
+
+        <div class="balls" id="luckyBalls">
+
+        </div>
+
+        <button id="weeklyBtn">Get Weekly Combinations</button>
+
+        <div class="active">
+          Total win: <span id="totalWin">0</span>
+        </div>
+      </div>
+    </div>
+
+<div class="cards" id="cards"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

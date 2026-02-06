@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.top {
+    display:flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.panel {
+    width: 360px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 10px 12px;
+    align-items: center;
+}
+
+input, select{
+    padding: 6px 8px;
+    border: 1px solid #bbbbbb;
+    outline: none;
+    width: 100%;
+}
+
+button{
+    margin-top: 12px;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.active{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.balls{
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0 6px 0;
+}
+
+.ball{
+    width:22px;
+    height: 22px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: #f2f2f2;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card{
+    width: 260px;
+    border: 2px solid #000000;
+    padding: 10px;
+}
+
+.card .row{
+    margin: 4px 0;
+}
+
+.card .comboBalls{
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.yellowCard{
+    background: #fff6a6;
+}
+
+.blueCard{
+    background: #bfe0f0;
+}
+
+.greenCard{
+    background: #93f09a;
+}
+
+.actionsBtn{
+    padding: 2px 10px;
+}
