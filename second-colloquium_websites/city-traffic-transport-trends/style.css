@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 30px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+h1{
+    margin: 0 0 14px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0 18px 0;
+}
+
+label{
+    font-size: 16px;
+}
+
+select{
+    padding: 6px 8px;
+    border: 1px solid #bbbbbb;
+    outline: none;
+}
+
+.panel{
+    max-width: 980px;
+    margin: 0 0 30px 0;
+}
+
+.chart{
+    width: 100%;
+    height: 430px;
+}
