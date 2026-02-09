@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 30px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+}
+
+h1{
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wrap{
+    width: 100%;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #000000;
+}
+
+.panel{
+    padding: 18px;
+    min-height: 320px;
+    border-right: 1px solid #000000;
+    background: linear-gradient(#f2f2f2, #ffffff);
+}
+
+.panel:last-child{
+    border-right: none;
+}
+
+.panelTitle{
+    text-align: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.gameBox{
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+}
+
+.spinner{
+    width: 170px;
+    height: 170px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    display: grid;
+    place-items: center;
+}
+
+.spinner img{
+    width: 110px;
+    height: 110px;
+}
+
+button{
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#winnerLine{
+    min-height: 22px;
+    font-size: 18px;
+}
+
+.charts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.chart{
+    width: 100%;
+    height: 220px;
+    border: 1px solid #000000;
+}
+
+.bottom{
+    margin-top: 18px;
+    border: 1px solid #000000;
+    padding: 18px;
+    background: linear-gradient(#f2f2f2, #ffffff);
+}
+
+.playersTitle{
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+}
+
+.playersRow{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 140px;
+    height: 190px;
+    border: 1px solid #000000;
+    padding: 12px 10px;
+    font-size: 16px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.c1 { background: #f3f6c9; }
+.c2 { background: #bde6f6; }
+.c3 { background: #f1c0cf; }
+.c4 { background: #d6f6ff; }
+.c5 { background: #d2d2d2; }
+.c6 { background: #f0a37f; }
+.c7 { background: #b7cae7; }
+
+.wins{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+@media (max-width: 900px) {
+    .top { grid-template-columns: 1fr; }
+    .panel { border-right: none; border-bottom: 1px solid #000; }
+    .panel:last-child { border-bottom: none; }
+}

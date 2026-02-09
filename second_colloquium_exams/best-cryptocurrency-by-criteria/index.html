@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cryptocurrency Visualizer</title>
+    <script src="https://cdn.plot.ly/plotly-3.3.0.min.js" charset="utf-8"></script>
+    <script src="../../animejs/dist/bundles/anime.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="panel">
+    <h1>Cryptocurrency Visualizer</h1>
+
+    <div class="controls">
+        <label for="criteria">Sort cryptocurrencies by: </label>
+        <select id="criteria">
+            <option value="market_cap">Market Cap</option>
+            <option value="current_price">Current Price</option>
+            <option value="total_volume">Volume</option>
+            <option value="price_change_percentage">24h % Change</option>
+        </select>
+    </div>
+
+    <div id="hint" class="hint">Select one more cryptocurrency...</div>
+
+    <div id="badgesWrap" class="badgesWrap">
+        <div class="muted"> Loading data...</div>
+    </div>
+
+    <div class="charts">
+        <div class="chartBox">
+            <div id="priceChart" class="chart"></div>
+        </div>
+        <div class="chartBox">
+            <div id="changeChart" class="chart"></div>
+        </div>
+    </div>
+
+    <div class="detailsArea">
+        <div id="cardsRow" class="cardsRow"></div>
+
+        <div id="actions" class="actions">
+            <button id="removeBtn" class="btn">Remove cards</button>
+            <button id="statsBtn" class="btn">Show difference stats</button>
+        </div>
+    </div>
+
+    <div id="statsBox" class="statsBox" style="display:none;">
+        <h3>Difference (coin2 vs coin1)</h3>
+        <div id="statsBody"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

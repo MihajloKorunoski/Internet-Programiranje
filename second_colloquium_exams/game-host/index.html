@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Game Host</title>
+
+    <script src="https://cdn.plot.ly/plotly-3.3.0.min.js" charset="utf-8"></script>
+
+    <script src="../../animejs/dist/bundles/anime.umd.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Game Host</h1>
+
+        <div class="top">
+            <div class="panel">
+                <div class="panelTitle">Game Start</div>
+
+                <div class="gameBox">
+                    <div class="spinner" id="spinner">
+                        <img id="spinImg" src="1.jpg" alt="symbol"/>
+                    </div>
+
+
+                    <button id="startBtn">Start Game</button>
+                    <div id="winnerLine"></div>
+                </div>
+
+
+            </div>
+
+            <div class="panel">
+                <div class="panelTitle">Statistics</div>
+
+                <div class="statsBox">
+                    <button id="statsBtn">Show Statistics</button>
+                </div>
+
+                <div class="charts">
+                    <div id="betsChart" class="chart"></div>
+                    <div id="winsChart" class="chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="playersTitle">Players</div>
+            <div id="playersRow" class="playersRow">
+                <div class="muted">Generating players...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
